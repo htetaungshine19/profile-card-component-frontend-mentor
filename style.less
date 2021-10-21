@@ -1,0 +1,112 @@
+@darkcyan: hsl(185, 75%, 39%);
+@Verydarkdesaturateblue: hsl(229, 23%, 23%);
+@Darkgrayishblue: hsl(227, 10%, 46%);
+@Darkgray: hsl(0, 0%, 59%);
+@fontsize: 18px;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: @fontsize;
+  .wrapper {
+    z-index: -1;
+    background-color: @darkcyan;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("./images/bg-pattern-top.svg") no-repeat;
+      background-position: bottom right;
+      top: -50%;
+      left: -60%;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("./images/bg-pattern-bottom.svg") no-repeat;
+      background-position: top left;
+      bottom: -50%;
+      right: -60%;
+      z-index: -1;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+      width: 400px;
+      min-width: 400px;
+      height: 450px;
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      img {
+        align-self: flex-start;
+      }
+      #bg {
+        width: 100%;
+      }
+      h2 {
+        font-family: "Kumbh Sans";
+        font-weight: 700;
+        margin: 0;
+        display: inline-block;
+        align-self: center;
+        position: relative;
+        top: -5%;
+        color: hsl(229, 23%, 23%);
+        #age {
+          font-family: "Kumbh Sans";
+          font-weight: 400;
+          font-size: @fontsize;
+        }
+      }
+      #town {
+        align-self: center;
+        text-align: start;
+      }
+      #man {
+        align-self: center;
+        border-radius: 100%;
+        border: 5px solid white;
+        position: relative;
+        top: -10%;
+      }
+      .btm {
+        margin-top: 40px;
+        border-top: 1px solid @Darkgrayishblue;
+        display: flex;
+        .mini {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+  p {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+  }
+  span {
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+    color: @Darkgray;
+  }
+}

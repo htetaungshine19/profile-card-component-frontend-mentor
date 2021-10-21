@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/kumbhsans/v5/c4ml1n92AsfhuCq6tVsauoc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/kumbhsans/v5/c4mm1n92AsfhuCq6tVsagjt43KI.ttf) format('truetype');
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
+}
+body .wrapper {
+  z-index: -1;
+  background-color: hsl(185, 75%, 39%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("images/bg-pattern-top.svg") no-repeat;
+  background-position: bottom right;
+  top: -50%;
+  left: -60%;
+  z-index: -1;
+}
+body .wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("images/bg-pattern-bottom.svg") no-repeat;
+  background-position: top left;
+  bottom: -50%;
+  right: -60%;
+  z-index: -1;
+}
+body .wrapper .card {
+  width: 400px;
+  min-width: 400px;
+  height: 450px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body .wrapper .card img {
+  align-self: flex-start;
+}
+body .wrapper .card #bg {
+  width: 100%;
+}
+body .wrapper .card h2 {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  margin: 0;
+  display: inline-block;
+  align-self: center;
+  position: relative;
+  top: -5%;
+  color: hsl(229, 23%, 23%);
+}
+body .wrapper .card h2 #age {
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  font-size: 18px;
+}
+body .wrapper .card #town {
+  align-self: center;
+  text-align: start;
+}
+body .wrapper .card #man {
+  align-self: center;
+  border-radius: 100%;
+  border: 5px solid white;
+  position: relative;
+  top: -10%;
+}
+body .wrapper .card .btm {
+  margin-top: 40px;
+  border-top: 1px solid hsl(227, 10%, 46%);
+  display: flex;
+}
+body .wrapper .card .btm .mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+body p {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+}
+body span {
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
